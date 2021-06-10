@@ -8,10 +8,10 @@ import (
 	"flag"
 	"time"
 
-	"github.com/kidoman/embd"
-	"github.com/kidoman/embd/host/bbb"
+	"github.com/ssokol/embd"
+	"github.com/ssokol/embd/host/bbb"
 
-	_ "github.com/kidoman/embd/host/all"
+	_ "github.com/ssokol/embd/host/all"
 )
 
 func main() {
