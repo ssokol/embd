@@ -66,6 +66,8 @@ func DescribeHost() (*Descriptor, error) {
 		}
 	}
 
+fmt.Printf("+%v\n", describers)
+
 	describer, ok := describers[host]
 	if !ok {
 		return nil, fmt.Errorf("host: invalid host %q", host)

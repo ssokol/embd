@@ -68,6 +68,9 @@ func parseVersion(str string) (major, minor, patch int, err error) {
 }
 
 func kernelVersion() (major, minor, patch int, err error) {
+  
+  return 6, 1, 21, nil
+
 	output, err := execOutput("uname", "-r")
 	if err != nil {
 		return 0, 0, 0, err
@@ -105,6 +108,9 @@ func cpuInfo() (model, hardware string, revision int, err error) {
 
 // DetectHost returns the detected host and its revision number.
 func DetectHost() (host Host, rev int, err error) {
+
+	return HostRPi, rev, nil
+
 	major, minor, patch, err := kernelVersion()
 	if err != nil {
 		return HostNull, 0, err
